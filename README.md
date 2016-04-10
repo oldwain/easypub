@@ -52,21 +52,14 @@ index, fund, bond, cb(可转债), eb(可交换债), repo(逆回购), fundnav(基
 
 目前使用的分类及对应的代码表文件有：
 
-scopeandfile = {'all': 'stock_codes_all.conf',
-
-              'index': 'stock_codes_idx.conf',
-
-              'fund': 'stock_codes_fund.conf',
-
-              'astock': 'stock_codes_astock.conf',
-
-              'bstock': 'stock_codes_bstock.conf',
-
-              'defulat': 'stock_codes.conf',
-
-              'self': 'stock_codes_self.conf'
-
-              }
+scopeandfile = {'all': 'stock_codes_all.conf',  
+              'index': 'stock_codes_idx.conf',  
+              'fund': 'stock_codes_fund.conf',  
+              'astock': 'stock_codes_astock.conf',  
+              'bstock': 'stock_codes_bstock.conf',  
+              'defulat': 'stock_codes.conf',  
+              'self': 'stock_codes_self.conf'  
+              }  
 
 其中self为自选代码表，自行编辑，update_stock_codes时不做更新，但可以读取。
 
