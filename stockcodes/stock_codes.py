@@ -96,4 +96,4 @@ def code_type(stock_code):
 
 
 #if __name__ == 'main':
-update_stock_codes()
+# update_stock_codes()
