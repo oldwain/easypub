@@ -46,6 +46,7 @@ stock_type = stockcodes.code_type(stock_code)
 
     注：
 
+<<<<<<< .merge_file_a08668
     目前使用的分类及对应的代码表文件有：
 
     scopeandfile = {'all': 'stock_codes_all.conf',
@@ -56,6 +57,18 @@ stock_type = stockcodes.code_type(stock_code)
               'defulat': 'stock_codes.conf',
               'self': 'stock_codes_self.conf'
               }
+=======
+目前使用的分类及对应的代码表文件有：
+
+scopeandfile = {'all': 'stock_codes_all.conf',  
+              'index': 'stock_codes_idx.conf',  
+              'fund': 'stock_codes_fund.conf',  
+              'astock': 'stock_codes_astock.conf',  
+              'bstock': 'stock_codes_bstock.conf',  
+              'defulat': 'stock_codes.conf',  
+              'self': 'stock_codes_self.conf'  
+              }  
+>>>>>>> .merge_file_a09336
 
     其中self为自选代码表，自行编辑，update_stock_codes时不做更新，但可以读取。
 
