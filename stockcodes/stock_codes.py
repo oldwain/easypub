@@ -94,6 +94,21 @@ def code_type(stock_code):
     else:
         return 'other'
 
+def get_stock_type(stock_code):
+    """判断股票ID对应的证券市场
+    :param stock_code:股票ID
+    :return 'sh' or 'sz'"""
+
+    return stock_code[:2].lower() if str(stock_code).lower().startswith(('s', 'o')) else ('sh' if str(stock_code).startswith(('5', '6', '9')) else 'sz')
+
+
+def get_full_code(stock_code):
+    """
+    :param stock_code:  股票 ID
+    :return:  'sh000001' or 'sz000001'
+    """
+
+    return stock_code.lower() if str(stock_code).lower().startswith(('s', 'o')) else get_stock_type(stock_code) + stock_code
 
 #if __name__ == 'main':
 # update_stock_codes()
