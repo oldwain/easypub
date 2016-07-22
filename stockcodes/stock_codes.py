@@ -12,7 +12,8 @@ scopeandfile = {'all': 'stock_codes_all.conf',
               'astock': 'stock_codes_astock.conf',
               'bstock': 'stock_codes_bstock.conf',
               'defulat': 'stock_codes.conf',
-              'self': 'stock_codes_self.conf'
+              'self': 'stock_codes_self.conf',
+              'yahoo': 'stock_codes_yahoo.conf'
               }
 def update_stock_codes():
     """获取所有股票 ID 到 all_stock_code 目录下"""
@@ -112,3 +113,15 @@ def get_full_code(stock_code):
 
 #if __name__ == 'main':
 # update_stock_codes()
+
+def get_yahoo_stock_codes(scope = ['yahoo'], refresh=False):
+    if refresh:
+        update_stock_codes()
+
+
+    result = []
+    for s in scope:
+        with open(stock_code_path(s)) as f:
+            data = json.load(f)['stock']
+        result = result + data
+    return result
